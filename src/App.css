@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.hello {
+  font-size: 36px;
+}
+.ImgContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.img {
+  width: 200px;
+  height: auto;
+}
+
+.score {
+  font-size: 24px;
+}
+
+.bestScore {
+  font-size: 24px;
+}
+
+.scoreboard {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.top {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

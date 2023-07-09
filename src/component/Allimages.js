@@ -1,0 +1,25 @@
+const AllImages = [
+  require("../cartoon/0.png"),
+  require("../cartoon/1.png"),
+  require("../cartoon/2.png"),
+  require("../cartoon/3.png"),
+  require("../cartoon/4.png"),
+  require("../cartoon/5.png"),
+  require("../cartoon/6.png"),
+  require("../cartoon/7.png"),
+  require("../cartoon/8.png"),
+  require("../cartoon/9.png"),
+  require("../cartoon/10.png"),
+  require("../cartoon/11.png"),
+  require("../cartoon/12.png"),
+  require("../cartoon/13.png"),
+  require("../cartoon/14.png"),
+  require("../cartoon/15.png"),
+  require("../cartoon/16.png"),
+  require("../cartoon/17.png"),
+  require("../cartoon/18.png"),
+  require("../cartoon/19.png"),
+  require("../cartoon/20.png"),
+];
+
+export default AllImages;

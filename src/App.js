@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Cards from "./component/Cards";
+import { useState, useRef } from "react";
+import Score from "./component/Score";
 
 function App() {
+  const [data, setdata] = useState([]);
+  const [score, setScore] = useState(0);
+  const [bestScore, setbestScore] = useState(0);
+  const ref = useRef();
+
+  const onclick = (e) => {
+    let booleanValue = data.some((item) =>
+      item == e.target.alt ? true : false
+    );
+    if (booleanValue == false) {
+      setdata((prevState) => [...prevState, e.target.alt]);
+      console.log(e.target.alt);
+      //console.log("no match");
+      setScore((prevState) => prevState + 1);
+    } else {
+      //console.log("game Over");
+      setbestScore((prevState) => (prevState < score ? score : prevState));
+      setScore(0);
+      setdata([]);
+    }
+    //console.log(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Score score={score} bestScore={bestScore} />
+      <Cards click={onclick} />;
     </div>
   );
 }
